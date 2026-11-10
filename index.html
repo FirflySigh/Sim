@@ -22,7 +22,7 @@
       min-height: 100svh;
       min-height: 100dvh;
       margin: 0;
-      padding: max(16px, env(safe-area-inset-top)) max(10vw, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(10vw, env(safe-area-inset-left));
+      padding: max(10px, env(safe-area-inset-top)) max(10vw, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(10vw, env(safe-area-inset-left));
       display: grid;
       place-items: center;
       overflow-x: hidden;
@@ -33,16 +33,16 @@
 
     main {
       width: 100%;
-      min-height: calc(100vh - 32px);
-      min-height: calc(100svh - 32px);
-      min-height: calc(100dvh - max(32px, env(safe-area-inset-top) + env(safe-area-inset-bottom)));
+      min-height: calc(100vh - 20px);
+      min-height: calc(100svh - 20px);
+      min-height: calc(100dvh - max(20px, env(safe-area-inset-top) + env(safe-area-inset-bottom)));
       display: grid;
       place-items: center;
     }
 
     .profile-card {
       width: 100%;
-      min-height: min(760px, calc(100dvh - 48px));
+      min-height: min(760px, calc(100dvh - 40px));
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -52,7 +52,7 @@
     }
 
     .profile-header {
-      min-height: clamp(140px, 24vh, 240px);
+      min-height: clamp(120px, 20vh, 200px);
       flex: 0 0 auto;
       background: #4f46e5 url("assets/images/cover.svg") center / cover no-repeat;
     }
@@ -60,41 +60,41 @@
     .profile-content {
       width: min(100%, 760px);
       margin: auto;
-      padding: clamp(2rem, 6vh, 4rem) clamp(1.25rem, 6vw, 3.5rem);
+      padding: clamp(1.25rem, 3vh, 2rem) clamp(1.25rem, 6vw, 3.5rem);
       text-align: center;
     }
 
     .profile-name {
       margin: 0;
-      font-size: clamp(2.1rem, 7vw, 3.5rem);
+      font-size: clamp(2.4rem, 8vw, 3.75rem);
       line-height: 1.1;
       letter-spacing: -0.035em;
     }
 
     .profile-handle {
-      margin: 0.8rem 0 1.25rem;
+      margin: 0.6rem 0 1rem;
       color: #6b7280;
-      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      font-size: clamp(1.15rem, 3vw, 1.4rem);
     }
 
     .profile-bio {
       max-width: 42ch;
-      margin: 0 auto 2rem;
-      color: #4b5563;
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      line-height: 1.7;
+      margin: 0 auto 1.5rem;
+      color: #374151;
+      font-size: clamp(1.15rem, 3vw, 1.35rem);
+      line-height: 1.65;
     }
 
     .profile-links {
       width: min(100%, 520px);
       margin: 0 auto;
       display: grid;
-      gap: 1rem;
+      gap: 0.85rem;
     }
 
     .profile-link {
-      min-height: 72px;
-      padding: 1.1rem 1.25rem;
+      min-height: 78px;
+      padding: 1rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -103,7 +103,7 @@
       border-radius: 16px;
       background: #4f46e5;
       color: #fff;
-      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      font-size: clamp(1.2rem, 3vw, 1.4rem);
       font-weight: 700;
       text-decoration: none;
       transition: background-color 160ms ease, transform 160ms ease;
@@ -113,36 +113,39 @@
     .profile-link:focus-visible { outline: 3px solid #a5b4fc; outline-offset: 3px; }
     .profile-link.email { border-color: #d1d5db; background: #fff; color: #374151; }
     .profile-link.email:hover { background: #f9fafb; }
-    .profile-link svg { width: 24px; height: 24px; flex: 0 0 auto; }
+    .profile-link svg { width: 26px; height: 26px; flex: 0 0 auto; }
 
     @media (max-width: 600px) {
       body {
-        padding: max(10px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
+        padding: max(8px, env(safe-area-inset-top)) max(10vw, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom)) max(10vw, env(safe-area-inset-left));
       }
 
       main {
-        min-height: calc(100vh - 20px);
-        min-height: calc(100svh - 20px);
-        min-height: calc(100dvh - max(20px, env(safe-area-inset-top) + env(safe-area-inset-bottom)));
+        min-height: calc(100vh - 16px);
+        min-height: calc(100svh - 16px);
+        min-height: calc(100dvh - max(16px, env(safe-area-inset-top) + env(safe-area-inset-bottom)));
       }
 
       .profile-card {
-        min-height: min(720px, calc(100dvh - 40px));
+        min-height: min(720px, calc(100dvh - 32px));
         border-radius: 22px;
       }
 
-      .profile-header { min-height: clamp(120px, 20vh, 190px); }
-      .profile-content { padding: clamp(1.75rem, 5vh, 3rem) 1.25rem; }
-      .profile-link { min-height: 68px; }
+      .profile-header { min-height: clamp(110px, 17vh, 160px); }
+      .profile-content { padding: clamp(1rem, 2.5vh, 1.5rem) 1rem; }
+      .profile-name { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+      .profile-handle { font-size: 1.15rem; }
+      .profile-bio { font-size: 1.2rem; line-height: 1.6; margin-bottom: 1.25rem; }
+      .profile-link { min-height: 74px; font-size: 1.25rem; }
     }
 
     @media (max-height: 650px) {
       .profile-card { min-height: 0; }
-      .profile-header { min-height: 100px; }
-      .profile-content { padding-top: 1.25rem; padding-bottom: 1.25rem; }
-      .profile-handle { margin-bottom: 0.8rem; }
-      .profile-bio { margin-bottom: 1.1rem; }
-      .profile-link { min-height: 58px; }
+      .profile-header { min-height: 90px; }
+      .profile-content { padding-top: 0.9rem; padding-bottom: 0.9rem; }
+      .profile-handle { margin-bottom: 0.6rem; }
+      .profile-bio { margin-bottom: 0.9rem; }
+      .profile-link { min-height: 64px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
