@@ -49,7 +49,7 @@
     }
 
     .profile-header {
-      height: 120px;
+      height: 110px;
       flex: 0 0 auto;
       background: #4f46e5 url("assets/images/cover.svg") center / cover no-repeat;
     }
@@ -60,27 +60,30 @@
       text-align: center;
     }
 
+    /* Dramatically enlarged name */
     .profile-name {
       margin: 0;
-      font-size: clamp(2rem, 6vw, 2.5rem);
+      font-size: clamp(2.75rem, 9vw, 3.85rem);
       font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.025em;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: #111827;
     }
 
     .profile-handle {
-      margin: 0.4rem 0 1rem;
+      margin: 0.5rem 0 1rem;
       color: #4f46e5;
       font-size: clamp(1.15rem, 3.5vw, 1.3rem);
       font-weight: 700;
     }
 
+    /* Short, natural bio sentence */
     .profile-bio {
-      max-width: 44ch;
+      max-width: 38ch;
       margin: 0 auto 1.5rem;
       color: #374151;
       font-size: clamp(1.1rem, 3.2vw, 1.25rem);
-      line-height: 1.6;
+      line-height: 1.5;
       font-weight: 450;
     }
 
@@ -93,7 +96,6 @@
     }
 
     .profile-link {
-      /* Standard sleek button height (~52px) */
       min-height: 52px;
       padding: 0.75rem 1.25rem;
       display: flex;
@@ -131,11 +133,11 @@
         border-radius: 18px;
       }
 
-      .profile-header { height: 105px; }
+      .profile-header { height: 100px; }
       .profile-content { padding: 1.25rem 1.25rem 1.5rem; }
-      .profile-name { font-size: 2.1rem; }
-      .profile-handle { font-size: 1.15rem; margin-bottom: 0.85rem; }
-      .profile-bio { font-size: 1.1rem; line-height: 1.55; margin-bottom: 1.25rem; }
+      .profile-name { font-size: clamp(2.5rem, 11vw, 3.4rem); }
+      .profile-handle { font-size: 1.15rem; margin-bottom: 0.75rem; }
+      .profile-bio { font-size: 1.1rem; line-height: 1.45; margin-bottom: 1.25rem; }
       .profile-link { min-height: 50px; font-size: 1.05rem; }
     }
 
@@ -152,7 +154,7 @@
         <h1 class="profile-name" id="profile-name">Simona Vrabiescu</h1>
         <p class="profile-handle">360° Marketing &amp; Brand Strategist</p>
         <p class="profile-bio">
-          Accomplished 360° marketing and brand strategist with deep expertise in graphic design, digital business platforms, and cross-functional leadership across B2B and B2C industries.
+          I build 360° marketing strategies, visual design systems, and global campaigns for tech and industrial brands.
         </p>
         <nav class="profile-links" aria-label="Contact links">
           <a class="profile-link" href="https://linkedin.com/in/simona-vrabiescu" target="_blank" rel="noopener noreferrer">
