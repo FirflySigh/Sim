@@ -39,7 +39,7 @@
 
     .profile-card {
       width: 100%;
-      max-width: 440px; /* Reduced overall card size */
+      max-width: 520px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -49,62 +49,65 @@
     }
 
     .profile-header {
-      height: 110px;
+      height: 120px;
       flex: 0 0 auto;
       background: #4f46e5 url("assets/images/cover.svg") center / cover no-repeat;
     }
 
     .profile-content {
       width: 100%;
-      padding: 1.25rem 1.5rem;
+      padding: 1.5rem 1.75rem 1.75rem;
       text-align: center;
     }
 
     .profile-name {
       margin: 0;
-      font-size: clamp(1.6rem, 5vw, 2.2rem);
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
+      font-size: clamp(2rem, 6vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
     }
 
     .profile-handle {
-      margin: 0.35rem 0 0.85rem;
-      color: #4b5563;
-      font-size: clamp(1rem, 3vw, 1.15rem);
-      font-weight: 500;
+      margin: 0.4rem 0 1rem;
+      color: #4f46e5;
+      font-size: clamp(1.15rem, 3.5vw, 1.3rem);
+      font-weight: 700;
     }
 
     .profile-bio {
-      max-width: 36ch;
-      margin: 0 auto 1.25rem;
+      max-width: 44ch;
+      margin: 0 auto 1.5rem;
       color: #374151;
-      font-size: clamp(0.95rem, 2.5vw, 1.05rem);
-      line-height: 1.5;
+      font-size: clamp(1.1rem, 3.2vw, 1.25rem);
+      line-height: 1.6;
+      font-weight: 450;
     }
 
     .profile-links {
       width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
       display: grid;
       gap: 0.75rem;
     }
 
     .profile-link {
-      /* Scaled down ~20% from 84px to 66px */
-      min-height: 66px;
-      padding: 0.85rem 1.25rem;
+      /* Standard sleek button height (~52px) */
+      min-height: 52px;
+      padding: 0.75rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.75rem;
+      gap: 0.65rem;
       border: 2px solid transparent;
-      border-radius: 14px;
+      border-radius: 12px;
       background: #4f46e5;
       color: #fff;
-      font-size: clamp(1.05rem, 3vw, 1.2rem);
-      font-weight: 700;
+      font-size: clamp(1rem, 2.8vw, 1.1rem);
+      font-weight: 650;
       text-decoration: none;
-      box-shadow: 0 3px 10px rgba(79, 70, 229, 0.25);
+      box-shadow: 0 3px 8px rgba(79, 70, 229, 0.2);
       transition: background-color 160ms ease, transform 160ms ease;
     }
 
@@ -114,10 +117,10 @@
       border-color: #d1d5db; 
       background: #fff; 
       color: #1f2937; 
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
     .profile-link.email:hover { background: #f9fafb; }
-    .profile-link svg { width: 24px; height: 24px; flex: 0 0 auto; }
+    .profile-link svg { width: 20px; height: 20px; flex: 0 0 auto; }
 
     @media (max-width: 600px) {
       body {
@@ -128,12 +131,12 @@
         border-radius: 18px;
       }
 
-      .profile-header { height: 95px; }
-      .profile-content { padding: 1rem 1.15rem; }
-      .profile-name { font-size: 1.75rem; }
-      .profile-handle { font-size: 1.05rem; margin-bottom: 0.65rem; }
-      .profile-bio { font-size: 1rem; margin-bottom: 1rem; }
-      .profile-link { min-height: 62px; font-size: 1.1rem; }
+      .profile-header { height: 105px; }
+      .profile-content { padding: 1.25rem 1.25rem 1.5rem; }
+      .profile-name { font-size: 2.1rem; }
+      .profile-handle { font-size: 1.15rem; margin-bottom: 0.85rem; }
+      .profile-bio { font-size: 1.1rem; line-height: 1.55; margin-bottom: 1.25rem; }
+      .profile-link { min-height: 50px; font-size: 1.05rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -147,9 +150,9 @@
       <div class="profile-header" role="img" aria-label="Abstract header background"></div>
       <div class="profile-content">
         <h1 class="profile-name" id="profile-name">Simona Vrabiescu</h1>
-        <p class="profile-handle">Consultant &amp; Professional</p>
+        <p class="profile-handle">360° Marketing &amp; Brand Strategist</p>
         <p class="profile-bio">
-          I create thoughtful digital experiences and accessible, easy-to-use solutions.
+          Accomplished 360° marketing and brand strategist with deep expertise in graphic design, digital business platforms, and cross-functional leadership across B2B and B2C industries.
         </p>
         <nav class="profile-links" aria-label="Contact links">
           <a class="profile-link" href="https://linkedin.com/in/simona-vrabiescu" target="_blank" rel="noopener noreferrer">
