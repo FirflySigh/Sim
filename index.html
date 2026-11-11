@@ -225,13 +225,13 @@
     </article>
 
     <!-- Underlined gray text link -->
-    <button type="button" class="copy-url-link" id="copyUrlBtn">Save Card URL</button>
+    <button type="button" class="copy-url-link" id="copyUrlBtn">Save LinkedIn URL</button>
   </main>
 
   <script>
     document.getElementById('copyUrlBtn').addEventListener('click', function () {
       const btn = this;
-      navigator.clipboard.writeText(window.location.href).then(() => {
+      navigator.clipboard.writeText("https://linkedin.com/in/simona-vrabiescu").then(() => {//window.location.href).then(() => {
         const originalText = btn.textContent;
         btn.textContent = 'URL copied!';
         setTimeout(() => {
