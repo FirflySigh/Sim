@@ -33,8 +33,9 @@
 
     main {
       width: 100%;
-      display: grid;
-      place-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     /* Long-distance entrance with a smooth fade and subtle spring bounce */
@@ -53,6 +54,18 @@
       100% {
         transform: translateY(0) scale(1);
         opacity: 1;
+      }
+    }
+
+    /* Fade-in keyframe for the copy link */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -137,6 +150,33 @@
     .profile-link.email:hover { background: #f9fafb; }
     .profile-link svg { width: 20px; height: 20px; flex: 0 0 auto; }
 
+    /* Underlined gray text copy link, fades in 1 second after swoop (900ms + 1000ms = 1.9s delay) */
+    .copy-url-link {
+      margin-top: 1.25rem;
+      background: transparent;
+      border: none;
+      padding: 0;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: #6b7280;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+      opacity: 0;
+      animation: fadeIn 600ms ease-in-out 1.9s forwards;
+      transition: color 150ms ease;
+    }
+
+    .copy-url-link:hover {
+      color: #374151;
+    }
+
+    .copy-url-link:focus-visible {
+      outline: 2px solid #4f46e5;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
     @media (max-width: 600px) {
       body {
         padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
@@ -183,6 +223,22 @@
         </nav>
       </div>
     </article>
+
+    <!-- Underlined gray text link -->
+    <button type="button" class="copy-url-link" id="copyUrlBtn">Copy page URL</button>
   </main>
+
+  <script>
+    document.getElementById('copyUrlBtn').addEventListener('click', function () {
+      const btn = this;
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const originalText = btn.textContent;
+        btn.textContent = 'URL copied!';
+        setTimeout(() => {
+          btn.textContent = originalText;
+        }, 2000);
+      });
+    });
+  </script>
 </body>
 </html>
