@@ -37,6 +37,18 @@
       place-items: center;
     }
 
+    /* Keyframe animation for one-time swoop entrance */
+    @keyframes swoopIn {
+      0% {
+        transform: translateY(32px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
     .profile-card {
       width: 100%;
       max-width: 520px;
@@ -46,6 +58,9 @@
       background: #fff;
       border-radius: 20px;
       box-shadow: 0 12px 32px rgb(15 23 42 / 10%);
+      
+      /* Runs once on page load (0.45s smooth swoop) */
+      animation: swoopIn 450ms cubic-bezier(0.16, 1, 0.3, 1) both;
     }
 
     .profile-header {
@@ -131,8 +146,13 @@
       .profile-link { min-height: 50px; font-size: 1.05rem; }
     }
 
+    /* Fallback: completely disables animation for users who prefer reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+      *, *::before, *::after { 
+        scroll-behavior: auto !important; 
+        transition-duration: 0.01ms !important; 
+        animation-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
